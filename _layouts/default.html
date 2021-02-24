@@ -11,6 +11,10 @@
     <link rel="stylesheet" type="text/css" href="{{ page.style | prepend: page.dir | relative_url }}">
     {% endif %}
 
+    {% if page.blog %}
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/blog.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% endif %}
+
 {% seo %}
 {% include mathjax.html %}
   </head>
